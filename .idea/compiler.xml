@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="autoConfig" />
+        <module name="log" />
+        <module name="sb-config" />
+        <module name="sb-quickstart" />
+        <module name="springboot-learn" />
+        <module name="web" />
+        <module name="web-crud" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sb-quickstart2" target="1.8" />
+      <module name="sb-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="log" options="" />
+      <module name="sb-quickstart" options="" />
+      <module name="sb-quickstart2" options="-parameters" />
+      <module name="sb-web" options="" />
+      <module name="web" options="" />
+      <module name="web-crud" options="" />
+    </option>
+  </component>
+</project>
