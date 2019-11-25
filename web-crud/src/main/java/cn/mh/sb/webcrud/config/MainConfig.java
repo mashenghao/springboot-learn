@@ -1,6 +1,8 @@
 package cn.mh.sb.webcrud.config;
 
 import cn.mh.sb.webcrud.compont.LoginInterceptor;
+import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
@@ -81,6 +83,21 @@ public class MainConfig {
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginInterceptor())
                         .excludePathPatterns("/index.html", "/", "/login");
+            }
+        };
+    }
+
+
+    /**
+     * 代码扩展servlet容器配置
+     */
+    @Bean
+    public EmbeddedServletContainerCustomizer embeddedServletContainerCustomizer() {
+        //使用匿名内部类，创建一个实现类
+        return new EmbeddedServletContainerCustomizer() {
+            @Override
+            public void customize(ConfigurableEmbeddedServletContainer container) {
+                container.setPort(8888);
             }
         };
     }

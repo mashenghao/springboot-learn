@@ -9,10 +9,12 @@
         <module name="autoConfig" />
         <module name="log" />
         <module name="sb-config" />
+        <module name="sb-jdbc" />
         <module name="sb-quickstart" />
         <module name="springboot-learn" />
         <module name="web" />
         <module name="web-crud" />
+        <module name="web-jsp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="log" options="" />
+      <module name="sb-jdbc" options="" />
       <module name="sb-quickstart" options="" />
       <module name="sb-quickstart2" options="-parameters" />
       <module name="sb-web" options="" />
